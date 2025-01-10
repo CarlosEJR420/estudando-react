@@ -1,7 +1,10 @@
+import { TIPO_BOTAO } from "./constante"
+import style from './Botao.module.css'
+
 const Botao = (props) => {
-    const { texto, tipo = "primario", ...outrasprops } = props
+    const { texto, tipo = TIPO_BOTAO.PRIMARIO, ...outrasprops } = props
     return(
-        <button tipo={tipo} {...outrasprops} >
+        <button className={style.Botao}  tipo={tipo} {...outrasprops} >
             {texto}
         </button>
 
